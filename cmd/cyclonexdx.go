@@ -221,6 +221,10 @@ func transformToCycloneDXBOM(kbom *model.KBOM) *cyclonedx.BOM { //nolint:funlen
 					Name:  KSOCPrefix + "pkg:digest",
 					Value: img.Digest,
 				},
+				{
+					Name:  KSOCPrefix + "k8s:component:namespace",
+					Value: img.Namespace,
+				},
 			},
 		}
 
